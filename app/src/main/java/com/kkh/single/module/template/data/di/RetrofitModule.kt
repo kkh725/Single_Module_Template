@@ -16,14 +16,6 @@ import javax.inject.Singleton
 // NetworkQualifiers.kt
 // baseUrl 이 두 개 이상일 때 retrofit을 다르게 생성 후 주입 필요.
 
-@Qualifier
-@Retention(AnnotationRetention.BINARY)
-internal annotation class TestApi3
-
-@Qualifier
-@Retention(AnnotationRetention.BINARY)
-internal annotation class TestApi2
-
 // NetworkModule.kt
 @Module
 @InstallIn(SingletonComponent::class)
