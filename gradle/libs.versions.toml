@@ -1,41 +1,43 @@
 [versions]
-agp = "8.10.0"
-kotlin = "2.1.10"
+agp = "8.11.1"
+kotlin = "2.2.0"
 coreKtx = "1.16.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-lifecycleRuntimeKtx = "2.9.0"
+lifecycleRuntimeKtx = "2.9.2"
 activityCompose = "1.10.1"
-composeBom = "2025.05.00"
-jetbrainsKotlinJvm = "2.1.10"
-appcompat = "1.7.0"
+composeBom = "2025.07.00"
+jetbrainsKotlinJvm = "2.2.0"
+appcompat = "1.7.1"
 material = "1.12.0"
 
 #hilt
-hilt = "2.56"
+hilt = "2.57"
 hiltExt = "1.2.0"
 
 #ksp
 ksp = "2.1.10-1.0.31"
 
 #retrofit
-retrofit = "2.11.0"
+retrofit = "3.0.0"
 retrofit-gson = "2.13.1"
 
 #okhttp
-okhttp = "4.12.0"
+okhttp = "5.1.0"
 
 #datastore
-datastore = "1.1.6"
+datastore = "1.1.7"
 
 desugar_jdk_libs = "2.1.5"
-navigationComposeAndroid = "2.9.0"
+navigationComposeAndroid = "2.9.2"
+workRuntimeKtx = "2.10.2"
 
 # libraries ------------------------------------------------------------------------------------------------------------------------
 # ------------------------------------------------------------------------------------------------------------------------
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-work-runtime-ktx = { group = "androidx.work",name = "work-runtime-ktx", version.ref = "workRuntimeKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
