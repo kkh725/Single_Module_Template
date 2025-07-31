@@ -6,6 +6,10 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
+kotlin {
+    jvmToolchain(17)
+}
+
 android {
     namespace = "com.kkh.single.module.template"
     compileSdk = 36
@@ -29,13 +33,19 @@ android {
             )
         }
     }
+    packaging {
+        resources {
+            excludes += "META-INF/gradle/incremental.annotation.processors"
+        }
+    }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_21
-        targetCompatibility = JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures {
         compose = true
     }
+
 }
 
 dependencies {
@@ -55,13 +65,13 @@ dependencies {
 
     //ksp
     implementation(libs.ksp.gradlePlugin)
+    ksp(libs.hilt.compiler)
 
     // Hilt 관련
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation)
     implementation(libs.hilt.navigation.compose)
     implementation(libs.hilt.ext.work)
-    implementation(libs.hilt.compiler)
     testImplementation(libs.hilt.android.testing)
     androidTestImplementation(libs.hilt.android.testing)
 
